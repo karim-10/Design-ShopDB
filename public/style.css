@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0 5%;
+  color: #323a45;
+  font-family: "Karla", sans-serif;
+}
+nav,
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+li {
+  padding: 50px 15px;
+}
+li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #323a45;
+}
+li a:hover {
+  color: gold;
+}
+/* index seite */
+.index {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.article1:nth-of-type(7n + 1) {
+  grid-column: 1/-1;
+}
+.article1 > a:hover {
+  color: #323a45;
+  opacity: 0.5;
+}
+img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+.divs {
+  display: flex;
+  justify-content: space-between;
+}
+body > h3 {
+  text-align: center;
+  padding: 50px 0;
+}
+/* ------------------------------add seite */
+.addSeite > h1 {
+  text-align: center;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #848484;
+  color: white;
+  padding: 12px 20px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: wheat;
+  color: #848484;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.line {
+  position: absolute;
+  width: 1540px;
+  height: 0px;
+  left: -105px;
+  top: 800px;
+  overflow: hidden;
+  border: 2px solid rgba(50, 58, 69, 0.8);
+}
+
+.article2 {
+  position: relative;
+  top: 150px;
+}
+body > h2 {
+  position: relative;
+  top: 200px;
+  text-align: center;
+}
+/* ---------------------------------details seite */
+.editDelete a {
+  color: #323a45;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.editDelete a:hover {
+  color: #847;
+}
+.description {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+body > a {
+  position: absolute;
+  right: 5%;
+  padding: 15px 30px;
+  border: 2px solid gray;
+  color: #323a45;
+  text-decoration: none;
+}
+body > a:hover {
+  color: #847;
+  padding: 16px 31px;
+}
+/* Edit seite */
+#edit > h1 {
+  text-align: center;
+  font-size: 2em;
+}
+.hide {
+  display: none;
+}
+
+/* ---------------------------weekly seite  */
+
+.weekly > h1 {
+  border: 3px solid tomato;
+  text-align: center;
+  margin-top: 20%;
+  font-size: 3em;
+}

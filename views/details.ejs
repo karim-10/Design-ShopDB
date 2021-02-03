@@ -1,0 +1,56 @@
+<%- include ('./partials/head.ejs') %>
+
+<body>
+    <%- include ('./partials/nav.ejs') %>
+    <div class="editDelete">
+        <a id="toggle" href="">Edit</a>
+        <a href="/delete/<%= design._id %>">Delete</a>
+    </div>
+
+    <article class="article1">
+        <img src="<%= design.picture_Link %> " alt="">
+        <div class="divs">
+            <h2><%= design.product_name %> </h2>
+            <h2><%= design.price %> </h2>
+        </div>
+        <p><%= design.company %> </p>
+    </article>
+    <article class="description">
+        <h4>Product Description:</h4>
+        <h5><%= design.description %> </h5>
+    </article>
+    <a href="<%= design.link_shop %> ">BUY PRODUCT</a>
+
+    <article id="edit">
+        <h1>EDIT PRODUCT</h1>
+        <div class="container">
+            <form action="/edit/<%= design._id %>" method="POST">
+                <input type="text" name="product_name" value="<%= design.product_name %>">
+                <input type="text" name="picture_Link" value="<%= design.picture_Link %>">
+                <input type="text" name="company" value="<%= design.company %>">
+                <input type="text" name="price" value="<%= design.price %>">
+                <textarea name="description" id="" cols="30" rows="10" value="<%= design.description %>"></textarea>
+                <input type="submit" value="Edit">
+            </form>
+        </div>
+    </article>
+
+
+    <h3>THE DESIGN SHOP</h3>
+
+    <script>
+        const edit = document.getElementById('edit')
+        const show = document.getElementById('show')
+        const toggleBtn = document.getElementById('toggle')
+
+        edit.classList.add('hide')
+        toggleBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            edit.classList.toggle('hide')
+            show.classList.toggle('hide')
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<%- include ('./partials/head.ejs') %>
+
+<body>
+    <%- include ('./partials/nav.ejs') %>
+    <section class="index">
+        <% Designs.forEach(e => { %>
+        <article class="article1">
+            <a href="/details/<%= e._id %>"><img src="<%= e.picture_Link %> " alt=""></a>
+            
+            <div class="divs">
+                <h2><%= e.product_name %> </h2>
+                <h2><%= e.price %> </h2>
+            </div>
+            <p><%= e.company %> </p>
+        </article>
+        <% }) %>
+       
+    </section>
+    <h3>THE DESIGN SHOP</h3>
+    <%- include ('./partials/footer') %>
+</body>
+
+</html>
